@@ -14,14 +14,10 @@ function updateCounters() {
   const todonumber = totalnumber - donenumber;
   todo.innerText = todonumber;
 
-  console.log(todonumber);
-  console.log(donenumber);
-  console.log(totalnumber);
+  //console.log(todonumber);
+  //console.log(donenumber);
+  //console.log(totalnumber);
 }
-
-document.addEventListener("click", function () {
-  updateCounters();
-});
 
 function toggleDone(event) {
   const checkbox = event.currentTarget;
@@ -38,6 +34,7 @@ const checkboxes = document.querySelectorAll(".todo input");
 for (let i = 0; i < checkboxes.length; i++) {
   checkboxes[i].addEventListener("change", toggleDone);
 }
+
 function createTodo(text) {
   const newLabel = document.createElement("label");
   const newText = document.createTextNode(text);
@@ -60,15 +57,19 @@ document
     const inputText = input.value;
     event.preventDefault();
     createTodo(inputText);
-    console.log(inputText);
+    // console.log(inputText);
     input.value = null;
     updateCounters();
   });
 
 function cleanUpDoneTodos() {
-    const doneItems = document.querySelectorAll("input:checked");
+  const doneItems = document.querySelectorAll("input:checked");
 
   for (let i = 0; i < doneItems.length; i++) {
     doneItems[i].parentElement.parentElement.remove();
   }
 }
+
+document.addEventListener("click", function () {
+  updateCounters();
+});
