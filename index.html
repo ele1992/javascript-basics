@@ -1,15 +1,53 @@
 <!DOCTYPE html>
+
 <html>
+
   <head>
+
+    <meta charset= "UTF-8">
+
     <link href="style.css" rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap"
+      rel="stylesheet"
+    />
+
   </head>
+
   <body>
-    <div class="container">
+    <div class="content">
+
       <div class="header">Todo List</div>
-      <textarea class="textbox" cols="" rows="">What needs to be done?</textarea>
-      <div class="footer">todo:1 done:0 total:1</div>
+
+      <form>
+      <input
+        id="textboxid"
+        type="text"
+        placeholder="What needs to be done?"
+        maxlength="70"
+      ></input>
+    </form>
+
+    <ul id="todolist">
+        <li class="todo">
+            <label><input type="checkbox"/>Sweep the floor</label>
+        </li>
+        <li class="todo completed">
+            <label><input type="checkbox" checked/>Dust the vases</label>
+        </li>
+    </ul>
+
+      <div class="footer">
+          todo: <span id="todo-count">1</span>
+          done: <span id="done-count">0</span>
+          total:<span id="total-count">1</span>
+      </div>
+
     </div>
+
+    <script src="newscript.js"></script>
+
   </body>
+
 </html>
