@@ -30,7 +30,7 @@ ul#todolist {
   margin: 0;
   padding: 0;
 }
-.todo {
+li {
   border: 1px solid;
 }
 .footer {
@@ -44,4 +44,12 @@ ul#todolist {
 .completed{
     color:gray;
     text-decoration:line-through;
+}
+
+label{
+    display:block;
+    width:100%;
+}
+label:hover{
+    background-color:lightgray;
 }
